@@ -9,47 +9,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         :root {
-            --gold: #d4af37;
+            --primary-blue: #1e3a8a; /* Azul profundo */
+            --accent-blue: #3b82f6;  /* Azul brillante */
+            --light-blue: #dbeafe;   /* Azul muy claro */
             --dark-gray: #1a1a1a;
-            --soft-cream: #fdfbf7;
+            --soft-bg: #f8fafc;      /* Fondo gélido muy suave */
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--soft-cream);
+            background-color: var(--soft-bg);
             color: var(--dark-gray);
             overflow-x: hidden;
+            font-size: 1.1rem;
         }
 
         h1, h2, h3, .font-serif {
             font-family: 'Playfair Display', serif;
         }
 
-        .bg-gold-gradient {
-            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #f1d592 100%);
+        .bg-blue-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
         }
 
         .glass-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(30, 58, 138, 0.1);
         }
 
-        .input-gold {
+        .input-blue {
             background: rgba(255, 255, 255, 0.5);
-            border: 1px solid var(--gold);
-            padding: 12px 20px;
+            border: 1px solid var(--primary-blue);
+            padding: 14px 22px;
             border-radius: 99px;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             outline: none;
             transition: all 0.3s ease;
             color: var(--dark-gray);
         }
 
-        .input-gold:focus {
+        .input-blue:focus {
             background: white;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
         }
 
         .btn-primary {
@@ -70,7 +73,7 @@
 
         .img-frame {
             border: 8px solid white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
             transition: transform 0.4s ease;
         }
         .img-frame:hover {
@@ -78,8 +81,11 @@
         }
 
         .floral-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23d4af37' fill-opacity='0.05'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%231e3a8a' fill-opacity='0.03'/%3E%3C/svg%3E");
         }
+
+        .text-primary-blue { color: var(--primary-blue); }
+        .border-primary-blue { border-color: var(--primary-blue); }
     </style>
 </head>
 <body class="floral-bg">
@@ -87,142 +93,148 @@
     <!-- Portada Principal -->
     <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative py-20">
         <div class="animate__animated animate__fadeInDown mb-8">
-            <span class="text-gold uppercase tracking-[0.3em] text-xs font-bold" style="color: var(--gold);">Bienvenidos a mi sueño</span>
+            <span class="text-primary-blue uppercase tracking-[0.3em] text-sm font-bold">Bienvenidos a mi sueño</span>
         </div>
         
         <div class="mb-10 animate__animated animate__zoomIn">
             <div class="relative inline-block">
-                <img src="Aylen_3.jpg" alt="Aylen Galarza" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
-                <div class="absolute inset-0 rounded-full border-2 border-gold opacity-50 m-2"></div>
+                <!-- Usando la foto proporcionada -->
+                <img src="Aylen_4.jpg" alt="Aylen Galarza" class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
+                <div class="absolute inset-0 rounded-full border-2 border-primary-blue opacity-30 m-2"></div>
             </div>
         </div>
 
-        <h1 class="text-6xl md:text-8xl mb-4 animate__animated animate__fadeInUp italic" style="color: var(--gold);">Mis XV Años</h1>
-        <div class="h-[1px] w-32 bg-gold-gradient mb-6 mx-auto"></div>
-        <h2 class="text-3xl md:text-4xl font-light mb-8 animate__animated animate__fadeIn tracking-wider uppercase">Aylen Galarza</h2>
+        <h1 class="text-7xl md:text-9xl mb-4 animate__animated animate__fadeInUp italic text-primary-blue">Mis XV Años</h1>
+        <div class="h-[2px] w-40 bg-blue-gradient mb-6 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-light mb-10 animate__animated animate__fadeIn tracking-widest uppercase text-gray-700">Aylen Galarza</h2>
         
-        <div class="animate__animated animate__fadeInUp animate__delay-1s text-lg max-w-md italic text-gray-600 px-4 leading-relaxed mx-auto">
+        <div class="animate__animated animate__fadeInUp animate__delay-1s text-xl md:text-2xl max-w-xl italic text-gray-500 px-4 leading-relaxed mx-auto">
             "Ayer una niña que jugaba a soñar, hoy una mujer que comienza a volar..."
         </div>
     </header>
 
     <!-- Galería de Recuerdos -->
-    <section class="py-16 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-            <h3 class="text-3xl font-serif italic mb-2">Mi camino</h3>
-            <div class="h-[1px] w-20 bg-gold mx-auto opacity-30"></div>
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-serif italic mb-4 text-primary-blue">Mi camino</h3>
+            <div class="h-[1px] w-24 bg-primary-blue mx-auto opacity-20"></div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center">
             <div class="animate__animated animate__fadeInLeft">
-                <img src="Aylen_1.jpg" alt="Aylen Bebé" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Bebé'">
-                <p class="text-xs uppercase tracking-widest text-gold font-bold">El inicio</p>
+                <img src="Aylen_1.jpg" alt="Aylen Bebé" class="img-frame w-full aspect-square object-cover mb-6 rounded-xl" onerror="this.src='https://via.placeholder.com/300?text=Mi+Infancia'">
+                <p class="text-sm uppercase tracking-widest text-primary-blue font-bold">El inicio</p>
             </div>
             
             <div class="animate__animated animate__fadeInUp">
-                <img src="Aylen_2.jpg" alt="Aylen Pequeña" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Niña'">
-                <p class="text-xs uppercase tracking-widest text-gold font-bold">Creciendo</p>
+                <img src="Aylen_2.jpg" alt="Aylen Pequeña" class="img-frame w-full aspect-square object-cover mb-6 rounded-xl" onerror="this.src='https://via.placeholder.com/300?text=Creciendo'">
+                <p class="text-sm uppercase tracking-widest text-primary-blue font-bold">Creciendo</p>
             </div>
 
             <div class="animate__animated animate__fadeInRight">
-                <img src="Aylen_3.jpg" alt="Aylen" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Hoy'">
-                <p class="text-xs uppercase tracking-widest text-gold font-bold">Mi sueño</p>
+                <!-- También usamos la foto actual aquí -->
+                <img src="Aylen_3.jpg" alt="Aylen Hoy" class="img-frame w-full aspect-square object-cover mb-6 rounded-xl" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Hoy'">
+                <p class="text-sm uppercase tracking-widest text-primary-blue font-bold">Mi sueño</p>
             </div>
         </div>
     </section>
 
     <!-- Cuenta Regresiva -->
-    <section class="py-12 px-6 max-w-4xl mx-auto text-center">
-        <div class="glass-card p-10 rounded-3xl shadow-xl">
-            <p class="text-xs tracking-[0.4em] uppercase mb-8 text-gold font-bold" style="color: var(--gold);">Faltan...</p>
-            <div id="countdown" class="flex justify-center gap-6 md:gap-10 text-3xl md:text-5xl font-serif">
-                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Días</small></div>
-                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Hrs</small></div>
-                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Min</small></div>
-                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Seg</small></div>
+    <section class="py-16 px-6 max-w-5xl mx-auto text-center">
+        <div class="glass-card p-12 rounded-3xl shadow-xl">
+            <p class="text-sm tracking-[0.4em] uppercase mb-10 text-primary-blue font-bold">Faltan...</p>
+            <div id="countdown" class="flex justify-center gap-8 md:gap-14 text-4xl md:text-6xl font-serif text-primary-blue">
+                <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Días</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Hrs</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Min</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Seg</small></div>
             </div>
         </div>
     </section>
 
     <!-- Detalles: Ubicación y Dress Code -->
-    <section class="py-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto flex flex-col gap-6 md:grid md:grid-cols-2">
-            <div class="glass-card p-8 rounded-3xl">
-                <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">Ubicación</h3>
-                <p class="text-gray-600 text-sm mb-6 leading-relaxed">Salón de Eventos Fantasía<br>Calle Principal 456, Ciudad</p>
-                <a href="https://maps.google.com" target="_blank" class="text-xs font-bold uppercase tracking-widest text-gold underline">Ver Mapa</a>
+    <section class="py-20 px-6 text-center">
+        <div class="max-w-5xl mx-auto flex flex-col gap-10 md:grid md:grid-cols-2">
+            <div class="glass-card p-10 rounded-3xl">
+                <h3 class="text-2xl mb-4 font-serif text-primary-blue">Ubicación</h3>
+                <p class="text-gray-600 text-base mb-8 leading-relaxed">Salón de Eventos Fantasía<br>Calle Principal 456, Ciudad</p>
+                <a href="https://maps.google.com" target="_blank" class="text-sm font-bold uppercase tracking-widest text-primary-blue underline">Ver Mapa</a>
             </div>
 
-            <div class="glass-card p-8 rounded-3xl border-2 border-gold/10">
-                <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">Dress Code</h3>
-                <p class="font-bold tracking-widest text-gray-800 uppercase">Gala</p>
-                <p class="text-[10px] text-gray-500 mt-2 italic px-4">"Traje formal o vestido largo"</p>
+            <div class="glass-card p-10 rounded-3xl border-2 border-blue-100">
+                <h3 class="text-2xl mb-4 font-serif text-primary-blue">Dress Code</h3>
+                <p class="text-xl font-bold tracking-widest text-gray-800 uppercase">Elegante Sport / Gala</p>
+                <p class="text-xs text-gray-500 mt-3 italic px-4">"Tonos azules y blancos preferentemente"</p>
             </div>
         </div>
     </section>
 
     <!-- Formulario de Confirmación -->
-    <section class="py-12 px-6 text-center">
-        <div class="max-w-xl mx-auto glass-card p-8 md:p-10 rounded-3xl shadow-2xl border-2 border-gold/20">
-            <h3 class="font-serif text-2xl mb-2 italic">Confirmar Asistencia</h3>
-            <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-widest font-bold">Informa quiénes asisten</p>
+    <section class="py-16 px-6 text-center">
+        <div class="max-w-2xl mx-auto glass-card p-10 md:p-14 rounded-3xl shadow-2xl border-2 border-blue-100">
+            <h3 class="font-serif text-3xl mb-4 italic text-primary-blue">Confirmar Asistencia</h3>
+            <p class="text-xs text-gray-400 mb-10 uppercase tracking-widest font-bold">Informa quiénes asisten</p>
             
-            <div class="space-y-4 max-w-sm mx-auto">
+            <div class="space-y-6 max-w-md mx-auto">
                 <div class="text-left">
-                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Nombre o Familia:</label>
-                    <input type="text" id="guestName" placeholder="Ej: Familia Galarza" class="input-gold">
+                    <label class="text-xs uppercase tracking-widest ml-4 mb-2 block text-primary-blue font-bold">Nombre o Familia:</label>
+                    <input type="text" id="guestName" placeholder="Ej: Familia Galarza" class="input-blue">
                 </div>
                 
                 <div class="text-left">
-                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Cantidad de invitados:</label>
-                    <input type="number" id="guestCount" placeholder="Número de personas" class="input-gold">
+                    <label class="text-xs uppercase tracking-widest ml-4 mb-2 block text-primary-blue font-bold">Cantidad de invitados:</label>
+                    <input type="number" id="guestCount" placeholder="Número de personas" class="input-blue">
                 </div>
                 
-                <button id="submit-btn" onclick="saveToSheet()" class="btn-primary w-full py-4 rounded-full font-bold uppercase tracking-widest text-xs mt-4 shadow-lg hover:scale-105 transition-all">
+                <button id="submit-btn" onclick="saveToSheet()" class="btn-primary w-full py-5 rounded-full font-bold uppercase tracking-widest text-sm mt-6 shadow-lg hover:scale-105 transition-all bg-blue-50 text-primary-blue hover:bg-primary-blue hover:text-white">
                     Enviar Confirmación
                 </button>
-                <div id="status-msg" class="hidden text-[11px] mt-4 font-bold p-3 rounded-xl"></div>
+                <div id="status-msg" class="hidden text-sm mt-6 font-bold p-4 rounded-xl"></div>
             </div>
-            <p class="text-[10px] text-gray-400 mt-8 uppercase tracking-widest italic">Por favor confirmar antes del 20 de Septiembre</p>
+            <p class="text-xs text-gray-400 mt-10 uppercase tracking-widest italic">Por favor confirmar antes del 20 de Septiembre</p>
         </div>
     </section>
 
     <!-- Regalos y Transferencia -->
-    <section class="py-16 px-6 text-center">
-        <div class="max-w-xl mx-auto glass-card p-8 rounded-3xl border-dashed border-gold/40">
-            <h3 class="text-lg mb-4 font-serif italic" style="color: var(--gold);">Presentes</h3>
-            <p class="text-xs text-gray-600 italic mb-8">"Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo..."</p>
+    <section class="py-20 px-6 text-center">
+        <div class="max-w-2xl mx-auto glass-card p-10 rounded-3xl border-dashed border-primary-blue/30">
+            <h3 class="text-2xl mb-6 font-serif italic text-primary-blue">Presentes</h3>
+            <p class="text-sm text-gray-600 italic mb-10 px-4">"Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo..."</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="text-center p-4 border border-gold/10 rounded-xl bg-white/40">
-                    <h4 class="text-xs font-bold uppercase tracking-widest mb-2">Lluvia de Sobres</h4>
-                    <p class="text-[10px] text-gray-500 italic leading-relaxed">Tendremos un buzón especial el día del evento.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="text-center p-6 border border-blue-50 rounded-xl bg-white/40">
+                    <h4 class="text-sm font-bold uppercase tracking-widest mb-3 text-primary-blue">Lluvia de Sobres</h4>
+                    <p class="text-xs text-gray-500 italic leading-relaxed">Tendremos un buzón especial el día del evento.</p>
                 </div>
 
-                <div class="text-center p-4 border border-gold/10 rounded-xl bg-white/40">
-                    <h4 class="text-xs font-bold uppercase tracking-widest mb-2">Transferencia</h4>
-                    <p class="text-[10px] font-mono text-gray-700">ALIAS: aylen.xv.galarza</p>
-                    <p class="text-[10px] font-mono text-gray-700 mt-1">CBU: 0000003100012345678901</p>
+                <div class="text-center p-6 border border-blue-50 rounded-xl bg-white/40">
+                    <h4 class="text-sm font-bold uppercase tracking-widest mb-3 text-primary-blue">Transferencia</h4>
+                    <!-- Agregamos el Código QR dinámico -->
+                    <div class="mb-4 flex justify-center">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Alias:aylen.xv.galarza" alt="QR Transferencia" class="w-32 h-32 border-2 border-primary-blue/10 p-1 rounded-lg bg-white">
+                    </div>
+                    <p class="text-xs font-mono text-gray-700">ALIAS: aylen.xv.galarza</p>
+                    <p class="text-xs font-mono text-gray-700 mt-1">CBU: 0000003100012345678901</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Final WhatsApp -->
-    <section class="py-24 px-6 text-center bg-gold-gradient">
-        <div class="max-w-xl mx-auto text-white">
-            <h2 class="text-4xl md:text-5xl font-serif mb-8 italic">¿Contamos contigo?</h2>
-            <p class="text-xs mb-8 opacity-80 font-semibold tracking-wide uppercase">También puedes contactarme directo:</p>
+    <section class="py-28 px-6 text-center bg-blue-gradient">
+        <div class="max-w-2xl mx-auto text-white">
+            <h2 class="text-5xl md:text-6xl font-serif mb-10 italic">¿Contamos contigo?</h2>
+            <p class="text-sm mb-10 opacity-80 font-semibold tracking-wide uppercase">También puedes contactarme directo:</p>
 
             <a href="https://wa.me/5491130565852?text=%C2%A1Hola%20Aylen!%20Recib%C3%AD%20tu%20invitaci%C3%B3n%20y%20quer%C3%ADa%20hacerte%20una%20consulta..." 
-               class="bg-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs inline-block text-center shadow-lg transition-all hover:scale-105"
-               style="color: #1a1a1a !important; text-decoration: none;">
+               class="bg-white px-14 py-6 rounded-full font-bold uppercase tracking-widest text-sm inline-block text-center shadow-lg transition-all hover:scale-105"
+               style="color: var(--primary-blue) !important; text-decoration: none;">
                CONSULTA POR WHATSAPP
             </a>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-400 text-[10px] tracking-widest uppercase italic">
+    <footer class="py-16 text-center text-gray-400 text-xs tracking-[0.3em] uppercase italic">
         ✧ Aylen Galarza - 2026 ✧
     </footer>
 
@@ -240,7 +252,7 @@
 
             if (!name || !guests) {
                 status.innerText = "⚠️ Por favor completa los campos obligatorios.";
-                status.className = "block bg-red-50 text-red-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
+                status.className = "block bg-red-50 text-red-600 text-sm mt-6 font-bold p-4 rounded-xl";
                 status.classList.remove('hidden');
                 return;
             }
@@ -258,7 +270,7 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
                     status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
-                    status.className = "block bg-green-50 text-green-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
+                    status.className = "block bg-green-50 text-green-600 text-sm mt-6 font-bold p-4 rounded-xl";
                     status.classList.remove('hidden');
                     
                     setTimeout(function() {
