@@ -71,35 +71,70 @@
         .img-frame {
             border: 8px solid white;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .img-frame:hover {
+            transform: rotate(2deg) scale(1.02);
         }
 
         .floral-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23d4af37' fill-opacity='0.04'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23d4af37' fill-opacity='0.05'/%3E%3C/svg%3E");
         }
     </style>
 </head>
 <body class="floral-bg">
 
-    <!-- Hero Section -->
+    <!-- Portada Principal -->
     <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative py-20">
-        <div class="animate__animated animate__fadeInDown mb-6">
-            <span class="text-gold uppercase tracking-[0.3em] text-[10px] font-bold" style="color: var(--gold);">Estás invitado</span>
+        <div class="animate__animated animate__fadeInDown mb-8">
+            <span class="text-gold uppercase tracking-[0.3em] text-xs font-bold" style="color: var(--gold);">Bienvenidos a mi sueño</span>
         </div>
         
-        <div class="mb-8 animate__animated animate__zoomIn">
+        <div class="mb-10 animate__animated animate__zoomIn">
             <div class="relative inline-block">
-                <img src="Aylen_3.jpg" alt="Aylen Galarza" class="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
-                <div class="absolute inset-0 rounded-full border-2 border-gold opacity-30 m-2"></div>
+                <img src="Aylen_3.jpg" alt="Aylen Galarza" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
+                <div class="absolute inset-0 rounded-full border-2 border-gold opacity-50 m-2"></div>
             </div>
         </div>
 
-        <h1 class="text-5xl md:text-7xl mb-4 animate__animated animate__fadeInUp italic" style="color: var(--gold);">Mis XV Años</h1>
-        <h2 class="text-2xl md:text-3xl font-light mb-8 animate__animated animate__fadeIn tracking-widest uppercase">Aylen Galarza</h2>
+        <h1 class="text-6xl md:text-8xl mb-4 animate__animated animate__fadeInUp italic" style="color: var(--gold);">Mis XV Años</h1>
+        <div class="h-[1px] w-32 bg-gold-gradient mb-6 mx-auto"></div>
+        <h2 class="text-3xl md:text-4xl font-light mb-8 animate__animated animate__fadeIn tracking-wider uppercase">Aylen Galarza</h2>
+        
+        <div class="animate__animated animate__fadeInUp animate__delay-1s text-lg max-w-md italic text-gray-600 px-4 leading-relaxed mx-auto">
+            "Ayer una niña que jugaba a soñar, hoy una mujer que comienza a volar..."
+        </div>
     </header>
+
+    <!-- Galería de Recuerdos -->
+    <section class="py-16 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-serif italic mb-2">Mi camino</h3>
+            <div class="h-[1px] w-20 bg-gold mx-auto opacity-30"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+            <div class="animate__animated animate__fadeInLeft">
+                <img src="Aylen_1.jpg" alt="Aylen Bebé" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Bebé'">
+                <p class="text-xs uppercase tracking-widest text-gold font-bold">El inicio</p>
+            </div>
+            
+            <div class="animate__animated animate__fadeInUp">
+                <img src="Aylen_2.jpg" alt="Aylen Pequeña" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Niña'">
+                <p class="text-xs uppercase tracking-widest text-gold font-bold">Creciendo</p>
+            </div>
+
+            <div class="animate__animated animate__fadeInRight">
+                <img src="Aylen_3.jpg" alt="Aylen" class="img-frame w-full aspect-square object-cover mb-4" onerror="this.src='https://via.placeholder.com/300?text=Aylen+Hoy'">
+                <p class="text-xs uppercase tracking-widest text-gold font-bold">Mi sueño</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Cuenta Regresiva -->
     <section class="py-12 px-6 max-w-4xl mx-auto text-center">
         <div class="glass-card p-10 rounded-3xl shadow-xl">
+            <p class="text-xs tracking-[0.4em] uppercase mb-8 text-gold font-bold" style="color: var(--gold);">Faltan...</p>
             <div id="countdown" class="flex justify-center gap-6 md:gap-10 text-3xl md:text-5xl font-serif">
                 <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Días</small></div>
                 <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Hrs</small></div>
@@ -109,42 +144,81 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONEXIÓN CON GOOGLE SHEETS -->
+    <!-- Detalles: Ubicación y Dress Code -->
     <section class="py-16 px-6 text-center">
-        <div class="max-w-md mx-auto glass-card p-8 md:p-10 rounded-3xl shadow-2xl border-2 border-gold/20">
+        <div class="max-w-4xl mx-auto flex flex-col gap-6 md:grid md:grid-cols-2">
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">Ubicación</h3>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">Salón de Eventos Fantasía<br>Calle Principal 456, Ciudad</p>
+                <a href="https://maps.google.com" target="_blank" class="text-xs font-bold uppercase tracking-widest text-gold underline">Ver Mapa</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border-2 border-gold/10">
+                <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">Dress Code</h3>
+                <p class="font-bold tracking-widest text-gray-800 uppercase">Gala</p>
+                <p class="text-[10px] text-gray-500 mt-2 italic px-4">"Traje formal o vestido largo"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Confirmación -->
+    <section class="py-12 px-6 text-center">
+        <div class="max-w-xl mx-auto glass-card p-8 md:p-10 rounded-3xl shadow-2xl border-2 border-gold/20">
             <h3 class="font-serif text-2xl mb-2 italic">Confirmar Asistencia</h3>
-            <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-widest font-bold">Tus datos se guardarán en mi lista</p>
+            <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-widest font-bold">Informa quiénes asisten</p>
             
-            <div class="space-y-4">
+            <div class="space-y-4 max-w-sm mx-auto">
                 <div class="text-left">
                     <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Nombre o Familia:</label>
                     <input type="text" id="guestName" placeholder="Ej: Familia Galarza" class="input-gold">
                 </div>
                 
                 <div class="text-left">
-                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Cantidad de personas:</label>
-                    <input type="number" id="guestCount" placeholder="¿Cuántos vienen?" class="input-gold">
+                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Cantidad de invitados:</label>
+                    <input type="number" id="guestCount" placeholder="Número de personas" class="input-gold">
                 </div>
                 
                 <button id="submit-btn" onclick="saveToSheet()" class="btn-primary w-full py-4 rounded-full font-bold uppercase tracking-widest text-xs mt-4 shadow-lg hover:scale-105 transition-all">
                     Enviar Confirmación
                 </button>
-
-                <!-- Mensajes de estado -->
                 <div id="status-msg" class="hidden text-[11px] mt-4 font-bold p-3 rounded-xl"></div>
+            </div>
+            <p class="text-[10px] text-gray-400 mt-8 uppercase tracking-widest italic">Por favor confirmar antes del 20 de Septiembre</p>
+        </div>
+    </section>
+
+    <!-- Regalos y Transferencia -->
+    <section class="py-16 px-6 text-center">
+        <div class="max-w-xl mx-auto glass-card p-8 rounded-3xl border-dashed border-gold/40">
+            <h3 class="text-lg mb-4 font-serif italic" style="color: var(--gold);">Presentes</h3>
+            <p class="text-xs text-gray-600 italic mb-8">"Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo..."</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-center p-4 border border-gold/10 rounded-xl bg-white/40">
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-2">Lluvia de Sobres</h4>
+                    <p class="text-[10px] text-gray-500 italic leading-relaxed">Tendremos un buzón especial el día del evento.</p>
+                </div>
+
+                <div class="text-center p-4 border border-gold/10 rounded-xl bg-white/40">
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-2">Transferencia</h4>
+                    <p class="text-[10px] font-mono text-gray-700">ALIAS: aylen.xv.galarza</p>
+                    <p class="text-[10px] font-mono text-gray-700 mt-1">CBU: 0000003100012345678901</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Datos de la Fiesta -->
-    <section class="py-16 px-6 text-center max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="glass-card p-8 rounded-3xl">
-            <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">¿Cuándo?</h3>
-            <p class="text-gray-600 text-sm">10 de Octubre de 2026<br>A las 19:30 hs</p>
-        </div>
-        <div class="glass-card p-8 rounded-3xl">
-            <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">¿Dónde?</h3>
-            <p class="text-gray-600 text-sm">Salón de Eventos Fantasía<br>Calle Principal 456</p>
+    <!-- Sección Final WhatsApp -->
+    <section class="py-24 px-6 text-center bg-gold-gradient">
+        <div class="max-w-xl mx-auto text-white">
+            <h2 class="text-4xl md:text-5xl font-serif mb-8 italic">¿Contamos contigo?</h2>
+            <p class="text-xs mb-8 opacity-80 font-semibold tracking-wide uppercase">También puedes contactarme directo:</p>
+
+            <a href="https://wa.me/5491130565852?text=%C2%A1Hola%20Aylen!%20Recib%C3%AD%20tu%20invitaci%C3%B3n%20y%20quer%C3%ADa%20hacerte%20una%20consulta..." 
+               class="bg-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs inline-block text-center shadow-lg transition-all hover:scale-105"
+               style="color: #1a1a1a !important; text-decoration: none;">
+               CONSULTA POR WHATSAPP
+            </a>
         </div>
     </section>
 
@@ -153,10 +227,8 @@
     </footer>
 
     <script>
-        // URL de tu Script de Google
         var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxdoaxZpswrzf3jd5kVXBZmuY660NQxfxKBFHeie3VsKnmf_tDStK4QNsCMvO67Mc5f/exec";
 
-        // Función de guardado con lógica de compatibilidad antigua (AJAX clásico)
         function saveToSheet() {
             var nameInput = document.getElementById('guestName');
             var guestsInput = document.getElementById('guestCount');
@@ -167,28 +239,23 @@
             var guests = guestsInput.value.trim();
 
             if (!name || !guests) {
-                status.innerText = "⚠️ Por favor completa ambos campos.";
+                status.innerText = "⚠️ Por favor completa los campos obligatorios.";
                 status.className = "block bg-red-50 text-red-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
                 status.classList.remove('hidden');
                 return;
             }
 
-            // Bloquear botón
             btn.disabled = true;
             btn.innerText = "GUARDANDO...";
             status.classList.add('hidden');
 
-            // Preparamos los datos
             var payload = JSON.stringify({ name: name, guests: guests });
 
-            // Usamos XMLHttpRequest (Compatible con navegadores MUY viejos e iPhones antiguos)
             var xhr = new XMLHttpRequest();
             xhr.open("POST", SCRIPT_URL, true);
-            xhr.setRequestHeader("Content-Type", "text/plain"); // Evita problemas de CORS
+            xhr.setRequestHeader("Content-Type", "text/plain");
 
             xhr.onreadystatechange = function() {
-                // Como usamos no-cors en el servidor, no siempre recibiremos un 200 OK legible,
-                // así que esperamos a que la petición termine.
                 if (xhr.readyState === 4) {
                     status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
                     status.className = "block bg-green-50 text-green-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
@@ -202,14 +269,12 @@
             };
 
             xhr.onerror = function() {
-                // Fallback por si falla el Excel: igual abrir WhatsApp para que no se pierda el invitado
-                window.location.href = "https://wa.me/5491130565852?text=" + encodeURIComponent("Hola! Intento confirmar pero falló el registro. Somos " + name + " y seremos " + guests);
+                window.location.href = "https://wa.me/5491130565852?text=" + encodeURIComponent("Hola! Intento confirmar pero hubo un error. Somos " + name + " (" + guests + " pers).");
             };
 
             xhr.send(payload);
         }
 
-        // Contador compatible
         var eventDate = new Date("Oct 10, 2026 19:30:00").getTime();
         setInterval(function() {
             var now = new Date().getTime();
