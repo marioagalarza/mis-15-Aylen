@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Aylen Galarza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-gray: #1a1a1a;
+            --soft-cream: #fdfbf7;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #f1d592 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .input-gold {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--gold);
+            padding: 12px 20px;
+            border-radius: 99px;
+            width: 100%;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+            color: var(--dark-gray);
+        }
+
+        .input-gold:focus {
+            background: white;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1a1a1a !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            background: #f3f3f3;
+        }
+
+        .img-frame {
+            border: 8px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .floral-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23d4af37' fill-opacity='0.04'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="floral-bg">
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative py-20">
+        <div class="animate__animated animate__fadeInDown mb-6">
+            <span class="text-gold uppercase tracking-[0.3em] text-[10px] font-bold" style="color: var(--gold);">Estás invitado</span>
+        </div>
+        
+        <div class="mb-8 animate__animated animate__zoomIn">
+            <div class="relative inline-block">
+                <img src="Aylen_3.jpg" alt="Aylen Galarza" class="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
+                <div class="absolute inset-0 rounded-full border-2 border-gold opacity-30 m-2"></div>
+            </div>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl mb-4 animate__animated animate__fadeInUp italic" style="color: var(--gold);">Mis XV Años</h1>
+        <h2 class="text-2xl md:text-3xl font-light mb-8 animate__animated animate__fadeIn tracking-widest uppercase">Aylen Galarza</h2>
+    </header>
+
+    <!-- Cuenta Regresiva -->
+    <section class="py-12 px-6 max-w-4xl mx-auto text-center">
+        <div class="glass-card p-10 rounded-3xl shadow-xl">
+            <div id="countdown" class="flex justify-center gap-6 md:gap-10 text-3xl md:text-5xl font-serif">
+                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Días</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Hrs</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Min</small></div>
+                <div class="flex flex-col"><span>00</span><small class="text-[10px] uppercase mt-2 text-gray-400">Seg</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONEXIÓN CON GOOGLE SHEETS -->
+    <section class="py-16 px-6 text-center">
+        <div class="max-w-md mx-auto glass-card p-8 md:p-10 rounded-3xl shadow-2xl border-2 border-gold/20">
+            <h3 class="font-serif text-2xl mb-2 italic">Confirmar Asistencia</h3>
+            <p class="text-[10px] text-gray-400 mb-8 uppercase tracking-widest font-bold">Tus datos se guardarán en mi lista</p>
+            
+            <div class="space-y-4">
+                <div class="text-left">
+                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Nombre o Familia:</label>
+                    <input type="text" id="guestName" placeholder="Ej: Familia Galarza" class="input-gold">
+                </div>
+                
+                <div class="text-left">
+                    <label class="text-[10px] uppercase tracking-widest ml-4 mb-1 block text-gold font-bold">Cantidad de personas:</label>
+                    <input type="number" id="guestCount" placeholder="¿Cuántos vienen?" class="input-gold">
+                </div>
+                
+                <button id="submit-btn" onclick="saveToSheet()" class="btn-primary w-full py-4 rounded-full font-bold uppercase tracking-widest text-xs mt-4 shadow-lg hover:scale-105 transition-all">
+                    Enviar Confirmación
+                </button>
+
+                <!-- Mensajes de estado -->
+                <div id="status-msg" class="hidden text-[11px] mt-4 font-bold p-3 rounded-xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datos de la Fiesta -->
+    <section class="py-16 px-6 text-center max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 rounded-3xl">
+            <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">¿Cuándo?</h3>
+            <p class="text-gray-600 text-sm">10 de Octubre de 2026<br>A las 19:30 hs</p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl">
+            <h3 class="text-xl mb-2 font-serif" style="color: var(--gold);">¿Dónde?</h3>
+            <p class="text-gray-600 text-sm">Salón de Eventos Fantasía<br>Calle Principal 456</p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 text-[10px] tracking-widest uppercase italic">
+        ✧ Aylen Galarza - 2026 ✧
+    </footer>
+
+    <script>
+        // URL de tu Script de Google
+        var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxdoaxZpswrzf3jd5kVXBZmuY660NQxfxKBFHeie3VsKnmf_tDStK4QNsCMvO67Mc5f/exec";
+
+        // Función de guardado con lógica de compatibilidad antigua (AJAX clásico)
+        function saveToSheet() {
+            var nameInput = document.getElementById('guestName');
+            var guestsInput = document.getElementById('guestCount');
+            var btn = document.getElementById('submit-btn');
+            var status = document.getElementById('status-msg');
+
+            var name = nameInput.value.trim();
+            var guests = guestsInput.value.trim();
+
+            if (!name || !guests) {
+                status.innerText = "⚠️ Por favor completa ambos campos.";
+                status.className = "block bg-red-50 text-red-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
+                status.classList.remove('hidden');
+                return;
+            }
+
+            // Bloquear botón
+            btn.disabled = true;
+            btn.innerText = "GUARDANDO...";
+            status.classList.add('hidden');
+
+            // Preparamos los datos
+            var payload = JSON.stringify({ name: name, guests: guests });
+
+            // Usamos XMLHttpRequest (Compatible con navegadores MUY viejos e iPhones antiguos)
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", SCRIPT_URL, true);
+            xhr.setRequestHeader("Content-Type", "text/plain"); // Evita problemas de CORS
+
+            xhr.onreadystatechange = function() {
+                // Como usamos no-cors en el servidor, no siempre recibiremos un 200 OK legible,
+                // así que esperamos a que la petición termine.
+                if (xhr.readyState === 4) {
+                    status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
+                    status.className = "block bg-green-50 text-green-600 text-[11px] mt-4 font-bold p-3 rounded-xl";
+                    status.classList.remove('hidden');
+                    
+                    setTimeout(function() {
+                        var message = '¡Hola Aylen! Confirmo mi asistencia.\n\nNombre: ' + name + '\nInvitados: ' + guests + '\n\n(Ya quedó anotado en la lista ✨)';
+                        window.location.href = "https://wa.me/5491130565852?text=" + encodeURIComponent(message);
+                    }, 1500);
+                }
+            };
+
+            xhr.onerror = function() {
+                // Fallback por si falla el Excel: igual abrir WhatsApp para que no se pierda el invitado
+                window.location.href = "https://wa.me/5491130565852?text=" + encodeURIComponent("Hola! Intento confirmar pero falló el registro. Somos " + name + " y seremos " + guests);
+            };
+
+            xhr.send(payload);
+        }
+
+        // Contador compatible
+        var eventDate = new Date("Oct 10, 2026 19:30:00").getTime();
+        setInterval(function() {
+            var now = new Date().getTime();
+            var distance = eventDate - now;
+            var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var s = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            var spans = document.querySelectorAll("#countdown span");
+            if(spans.length >= 4) {
+                spans[0].innerText = d < 10 ? "0" + d : d;
+                spans[1].innerText = h < 10 ? "0" + h : h;
+                spans[2].innerText = m < 10 ? "0" + m : m;
+                spans[3].innerText = s < 10 ? "0" + s : s;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
