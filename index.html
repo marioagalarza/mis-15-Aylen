@@ -7,22 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- Iconos para el botón de música -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --champagne-gold: #c5a059; /* Dorado champagne principal */
-            --champagne-dark: #8e6d31; /* Tono más profundo para contraste */
-            --champagne-light: #f3e5ab; /* Crema champagne claro */
+            --champagne-gold: #c5a059;
+            --champagne-dark: #8e6d31;
+            --champagne-light: #f3e5ab;
             --dark-gray: #2c2c2c;
-            --soft-bg: #fdfbf7; /* Fondo crema muy suave */
+            --soft-bg: #fdfbf7;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--soft-bg);
             color: var(--dark-gray);
-            overflow: hidden; /* Se habilita al abrir la invitación */
+            overflow: hidden;
             font-size: 1.1rem;
         }
 
@@ -34,7 +33,6 @@
             background: linear-gradient(135deg, #c5a059 0%, #f1d592 50%, #f3e5ab 100%);
         }
 
-        /* Pantalla de Apertura (Welcome Overlay) */
         #welcome-overlay {
             position: fixed;
             top: 0;
@@ -70,7 +68,6 @@
             transform: translateY(-3px);
         }
 
-        /* Diseño de la invitación */
         .glass-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
@@ -104,12 +101,6 @@
             text-align: center;
         }
 
-        .img-frame {
-            border: 8px solid white;
-            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.1);
-            transition: transform 0.4s ease;
-        }
-
         .floral-bg {
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23c5a059' fill-opacity='0.05'/%3E%3C/svg%3E");
         }
@@ -117,7 +108,6 @@
         .text-champagne { color: var(--champagne-gold); }
         .border-champagne { border-color: var(--champagne-gold); }
 
-        /* Estilos del botón de música flotante */
         #music-control {
             position: fixed;
             bottom: 20px;
@@ -134,7 +124,7 @@
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: opacity 0.5s ease;
-            opacity: 0; /* Aparece solo después de abrir */
+            opacity: 0;
         }
 
         .playing {
@@ -150,7 +140,6 @@
 </head>
 <body class="floral-bg">
 
-    <!-- Pantalla de Bienvenida (Protector para habilitar audio) -->
     <div id="welcome-overlay">
         <div class="text-center p-8 animate__animated animate__fadeIn">
             <h2 class="font-serif text-4xl md:text-5xl text-champagne mb-4 italic">Invitación de Aylen</h2>
@@ -162,21 +151,16 @@
         </div>
     </div>
 
-    <!-- Elemento de Audio: Melodía de Piano Elegante -->
     <audio id="bg-music" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
     </audio>
 
-    <!-- Control de Música Flotante -->
     <div id="music-control" onclick="toggleMusic()">
         <i id="music-icon" class="fas fa-play text-champagne"></i>
     </div>
 
-    <!-- Contenido de la Invitación -->
     <main id="main-content" style="opacity: 0; display: none;">
         
-        <!-- Portada Principal -->
         <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative py-20">
             <div class="animate__animated animate__fadeInDown mb-8">
                 <span class="text-champagne uppercase tracking-[0.3em] text-sm font-bold">Bienvenidos a mi sueño</span>
@@ -184,7 +168,6 @@
             
             <div class="mb-10 animate__animated animate__zoomIn">
                 <div class="relative inline-block">
-                    <!-- Imagen con mascara.jpeg -->
                     <img src="mascara.jpeg" alt="Máscaras de XV Años" class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-white shadow-2xl" onerror="this.src='https://via.placeholder.com/400?text=Aylen+Galarza'">
                     <div class="absolute inset-0 rounded-full border-2 border-champagne opacity-30 m-2"></div>
                 </div>
@@ -194,25 +177,26 @@
             <div class="h-[2px] w-40 bg-champagne-gradient mb-6 mx-auto"></div>
             <h2 class="text-4xl md:text-5xl font-light mb-10 animate__animated animate__fadeIn tracking-widest uppercase text-gray-700">Aylen Galarza</h2>
             
-            <div class="animate__animated animate__fadeInUp animate__delay-1s text-xl md:text-2xl max-w-2xl italic text-gray-500 px-4 leading-relaxed mx-auto">
-                "Bajo el brillo de las luces y el misterio de una máscara, existe un sueño que está por comenzar. Te invito a ser cómplice de una noche donde la elegancia y la magia se encuentran para celebrar mis 15 años. Dejá que el encanto te guíe... ¿Te animás a descubrir lo que el destino tiene preparado?"
+            <div class="animate__animated animate__fadeInUp animate__delay-1s text-xl md:text-2xl max-w-3xl italic text-gray-500 px-4 leading-relaxed mx-auto font-serif">
+                Detrás de cada máscara hay un sueño por descubrir…<br>
+                Te invito a sumergirte en una noche mágica donde el misterio, el baile y la elegancia serán protagonistas.<br>
+                Mis 15 años se celebran con un toque de encanto y fantasía…<br>
+                ¡Me encantaría que seas parte de este sueño!
             </div>
         </header>
 
-        <!-- Cuenta Regresiva -->
         <section class="py-16 px-6 max-w-5xl mx-auto text-center">
             <div class="glass-card p-12 rounded-3xl shadow-xl">
                 <p class="text-sm tracking-[0.4em] uppercase mb-10 text-champagne font-bold italic">10 de Octubre de 2026</p>
                 <div id="countdown" class="flex justify-center gap-8 md:gap-14 text-4xl md:text-6xl font-serif text-champagne">
-                    <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Días</small></div>
-                    <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Hrs</small></div>
-                    <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Min</small></div>
-                    <div class="flex flex-col"><span>00</span><small class="text-xs uppercase mt-3 text-gray-400">Seg</small></div>
+                    <div class="flex flex-col"><span id="days">00</span><small class="text-xs uppercase mt-3 text-gray-400">Días</small></div>
+                    <div class="flex flex-col"><span id="hours">00</span><small class="text-xs uppercase mt-3 text-gray-400">Hrs</small></div>
+                    <div class="flex flex-col"><span id="minutes">00</span><small class="text-xs uppercase mt-3 text-gray-400">Min</small></div>
+                    <div class="flex flex-col"><span id="seconds">00</span><small class="text-xs uppercase mt-3 text-gray-400">Seg</small></div>
                 </div>
             </div>
         </section>
 
-        <!-- Detalles: Ubicación y Horario -->
         <section class="py-20 px-6 text-center">
             <div class="max-w-5xl mx-auto flex flex-col gap-10 md:grid md:grid-cols-2">
                 <div class="glass-card p-10 rounded-3xl">
@@ -230,7 +214,6 @@
             </div>
         </section>
 
-        <!-- Formulario de Confirmación -->
         <section class="py-16 px-6 text-center">
             <div class="max-w-2xl mx-auto glass-card p-10 md:p-14 rounded-3xl shadow-2xl border-2 border-champagne/20">
                 <h3 class="font-serif text-3xl mb-4 italic text-champagne">Confirmar Asistencia</h3>
@@ -248,7 +231,6 @@
             </div>
         </section>
 
-        <!-- Regalos y Transferencia -->
         <section class="py-20 px-6 text-center">
             <div class="max-w-2xl mx-auto glass-card p-10 rounded-3xl border-dashed border-champagne/40">
                 <h3 class="text-2xl mb-6 font-serif italic text-champagne">Presentes</h3>
@@ -262,17 +244,13 @@
 
                     <div class="text-center p-6 border border-champagne/10 rounded-xl bg-white/40">
                         <h4 class="text-sm font-bold uppercase tracking-widest mb-3 text-champagne">Transferencia</h4>
-                        <div class="mb-4 flex justify-center">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Alias:aylen.xv.galarza" alt="QR Transferencia" class="w-32 h-32 border-2 border-champagne/10 p-1 rounded-lg bg-white">
-                        </div>
-                        <p class="text-xs font-mono text-gray-700">ALIAS: aylen.xv.galarza</p>
-                        <p class="text-xs font-mono text-gray-700 mt-1">CBU: 0000003100012345678901</p>
+                        <p class="text-xs font-mono text-gray-700">ALIAS: Aylengalarza.</p>
+                        <p class="text-xs font-mono text-gray-700 mt-1">CVU: 0000003100077161154561</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Final WhatsApp -->
         <section class="py-28 px-6 text-center bg-champagne-gradient">
             <div class="max-w-2xl mx-auto text-white">
                 <h2 class="text-5xl md:text-6xl font-serif mb-10 italic">¿Contamos con vos?</h2>
@@ -300,14 +278,12 @@
         var isPlaying = false;
 
         function openInvitation() {
-            // Reproducir música (Permitido tras el clic)
             music.play().then(() => {
                 isPlaying = true;
                 musicIcon.className = "fas fa-pause text-champagne";
                 musicControl.classList.add("playing");
             }).catch(e => console.log("Audio falló", e));
 
-            // Animación de salida de la carátula
             overlay.style.opacity = "0";
             overlay.style.transform = "scale(1.1)";
             
@@ -315,7 +291,6 @@
                 overlay.style.display = "none";
                 content.style.display = "block";
                 document.body.style.overflow = "auto";
-                // Fundido suave del contenido
                 setTimeout(() => {
                     content.style.opacity = "1";
                     musicControl.style.opacity = "1";
@@ -339,7 +314,6 @@
         function saveToSheet() {
             var nameInput = document.getElementById('guestName');
             var guestsInput = document.getElementById('guestCount');
-            var btn = document.getElementById('submit-btn');
             var status = document.getElementById('status-msg');
 
             var name = nameInput.value.trim();
@@ -362,7 +336,6 @@
             }, 1500);
         }
 
-        // Contador
         var eventDate = new Date("Oct 10, 2026 21:00:00").getTime();
         setInterval(function() {
             var now = new Date().getTime();
@@ -372,13 +345,15 @@
             var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var s = Math.floor((distance % (1000 * 60)) / 1000);
             
-            var spans = document.querySelectorAll("#countdown span");
-            if(spans.length >= 4) {
-                spans[0].innerText = d < 10 ? "0" + d : d;
-                spans[1].innerText = h < 10 ? "0" + h : h;
-                spans[2].innerText = m < 10 ? "0" + m : m;
-                spans[3].innerText = s < 10 ? "0" + s : s;
-            }
+            var daysSpan = document.getElementById("days");
+            var hoursSpan = document.getElementById("hours");
+            var minutesSpan = document.getElementById("minutes");
+            var secondsSpan = document.getElementById("seconds");
+
+            if (daysSpan) daysSpan.innerText = d < 10 ? "0" + d : d;
+            if (hoursSpan) hoursSpan.innerText = h < 10 ? "0" + h : h;
+            if (minutesSpan) minutesSpan.innerText = m < 10 ? "0" + m : m;
+            if (secondsSpan) secondsSpan.innerText = s < 10 ? "0" + s : s;
         }, 1000);
     </script>
 </body>
