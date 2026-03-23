@@ -22,7 +22,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--soft-bg);
             color: var(--dark-gray);
-            overflow: hidden;
+            overflow-x: hidden;
             font-size: 1.1rem;
             margin: 0;
         }
@@ -35,7 +35,6 @@
             background: linear-gradient(135deg, #c5a059 0%, #f1d592 50%, #f3e5ab 100%);
         }
 
-        /* Estabilidad para iPhone: dvh */
         #welcome-overlay {
             position: fixed;
             top: 0;
@@ -90,11 +89,6 @@
             transition: all 0.3s ease;
             color: var(--dark-gray);
             appearance: none;
-        }
-
-        .input-champagne:focus {
-            background: white;
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
         }
 
         .btn-primary {
@@ -153,7 +147,6 @@
         </div>
     </div>
 
-    <!-- Audio configurado para máxima compatibilidad -->
     <audio id="bg-music" loop playsinline preload="auto">
         <source src="musica_descendientes.mp3" type="audio/mpeg">
     </audio>
@@ -207,7 +200,8 @@
                     <p class="text-[#c5a059] font-bold text-xl mb-2 italic underline">Sábado 10 de Octubre</p>
                     <p class="text-gray-600 text-base mb-2 leading-relaxed font-semibold">Alkazar Eventos<br>MITRE 162, Punta Alta</p>
                     <p class="text-[#c5a059] font-bold text-lg mb-6 leading-relaxed italic">De 21:00 a 05:30 hs</p>
-                    <a href="https://maps.app.goo.gl/uXv2p4sXz8G2" target="_blank" class="text-sm font-bold uppercase tracking-widest text-[#c5a059] underline">Ver Mapa</a>
+                    <!-- Link arreglado para máxima compatibilidad -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=Alkazar+Eventos+Punta+Alta" target="_blank" class="text-sm font-bold uppercase tracking-widest text-[#c5a059] underline">Ver Mapa</a>
                 </div>
 
                 <div class="glass-card p-10 rounded-3xl border-2 border-[#c5a059]/10 flex flex-col justify-center">
@@ -281,9 +275,7 @@
         const musicControl = document.getElementById("music-control");
         let isPlaying = false;
 
-        // Función para abrir la invitación (optimizada para iOS/iPhone)
         openBtn.addEventListener('click', function() {
-            // Reproducir audio inmediatamente (requisito de iPhone)
             audio.play().then(() => {
                 isPlaying = true;
                 musicIcon.className = "fas fa-pause text-[#c5a059]";
@@ -305,7 +297,6 @@
             }, 800);
         });
 
-        // Toggle de música
         musicControl.addEventListener('click', function() {
             if (isPlaying) {
                 audio.pause();
@@ -334,7 +325,7 @@
                 return;
             }
 
-            status.innerText = "✅ ¡Confirmado! Abriendo WhatsApp...";
+            status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
             status.className = "block bg-green-50 text-green-600 text-sm mt-6 font-bold p-4 rounded-xl";
             status.classList.remove('hidden');
             
@@ -344,8 +335,7 @@
             }, 1200);
         }
 
-        // Countdown corregido para Safari
-        const eventDate = new Date(2026, 9, 10, 21, 0, 0).getTime(); // 9 es Octubre
+        const eventDate = new Date(2026, 9, 10, 21, 0, 0).getTime();
         setInterval(function() {
             const now = new Date().getTime();
             const distance = eventDate - now;
