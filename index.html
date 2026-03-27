@@ -4,135 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mis XV Años - Aylen Galarza</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --champagne-gold: #c5a059;
-            --champagne-dark: #8e6d31;
-            --champagne-light: #f3e5ab;
-            --royal-purple: #4c1d95;
-            --dark-gray: #2c2c2c;
-            --soft-bg: #fdfbf7;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--soft-bg);
-            color: var(--dark-gray);
-            overflow-x: hidden;
-            font-size: 1.1rem;
-            margin: 0;
-        }
-
-        h1, h2, h3, .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .bg-champagne-gradient {
-            background: linear-gradient(135deg, #c5a059 0%, #f1d592 50%, #f3e5ab 100%);
-        }
-
-        #welcome-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100dvh;
-            background-color: var(--soft-bg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .open-btn {
-            background: white;
-            border: 2px solid var(--champagne-gold);
-            padding: 20px 45px;
-            border-radius: 50px;
-            color: var(--champagne-gold);
-            font-size: 1.1rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.15);
-            transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .open-btn:hover {
-            background: var(--champagne-gold);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .input-champagne {
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid var(--champagne-gold);
-            padding: 14px 22px;
-            border-radius: 99px;
-            width: 100%;
-            font-size: 1.1rem;
-            outline: none;
-            transition: all 0.3s ease;
-            color: var(--dark-gray);
-            appearance: none;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #1a1a1a !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .floral-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23c5a059' fill-opacity='0.05'/%3E%3C/svg%3E");
-        }
-
-        #music-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            border: 2px solid var(--champagne-gold);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: opacity 0.5s ease;
-        }
-
-        .playing {
-            animation: pulse-music 2s infinite;
-        }
-
-        @keyframes pulse-music {
-            0% { transform: scale(1); }
-            70% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body class="floral-bg">
 
@@ -198,7 +74,7 @@
                 <div class="glass-card p-10 rounded-3xl">
                     <h3 class="text-2xl mb-4 font-serif text-[#c5a059] italic">Ubicación y Horario</h3>
                     <p class="text-[#c5a059] font-bold text-xl mb-2 italic underline">Sábado 10 de Octubre</p>
-                    <p class="text-gray-600 text-base mb-2 leading-relaxed font-semibold">Alcazar Eventos<br>MITRE 162, Punta Alta</p>
+                    <p class="text-gray-600 text-base mb-2 leading-relaxed font-semibold">Alkazar Eventos<br>MITRE 162, Punta Alta</p>
                     <p class="text-[#c5a059] font-bold text-lg mb-6 leading-relaxed italic">De 21:00 a 05:30 hs</p>
                     <!-- Link arreglado para máxima compatibilidad -->
                     <a href="https://www.google.com/maps/search/?api=1&query=Alkazar+Eventos+Punta+Alta" target="_blank" class="text-sm font-bold uppercase tracking-widest text-[#c5a059] underline">Ver Mapa</a>
@@ -253,7 +129,7 @@
                 <h2 class="text-5xl md:text-6xl font-serif mb-10 italic">¿Contamos con vos?</h2>
                 <p class="text-sm mb-10 opacity-80 font-semibold tracking-wide uppercase">También podes contactarme directo:</p>
 
-                <a href="https://wa.me/5492932502726?text=%C2%A1Hola%20Aylen!%20Recib%C3%AD%20tu%20invitaci%C3%B3n..." 
+                <a href="https://wa.me/5491130565852?text=%C2%A1Hola%20Aylen!%20Recib%C3%AD%20tu%20invitaci%C3%B3n..." 
                    class="bg-white px-14 py-6 rounded-full font-bold uppercase tracking-widest text-sm inline-block text-center shadow-lg transition-all hover:scale-105"
                    style="color: var(--champagne-gold) !important; text-decoration: none;">
                    CONSULTA POR WHATSAPP
@@ -264,112 +140,7 @@
         <footer class="py-16 text-center text-gray-400 text-xs tracking-[0.3em] uppercase italic">
             ✧ Aylen Galarza - 2026 ✧
         </footer>
-    </main>
-
-    <script>
-        const audio = document.getElementById("bg-music");
-        const overlay = document.getElementById("welcome-overlay");
-        const openBtn = document.getElementById("openBtn");
-        const content = document.getElementById("main-content");
-        const musicIcon = document.getElementById("music-icon");
-        const musicControl = document.getElementById("music-control");
-        let isPlaying = false;
-
-        openBtn.addEventListener('click', function() {
-            audio.play().then(() => {
-                isPlaying = true;
-                musicIcon.className = "fas fa-pause text-[#c5a059]";
-                musicControl.classList.add("playing");
-            }).catch(e => console.log("Audio falló", e));
-
-            overlay.style.opacity = "0";
-            overlay.style.transform = "scale(1.1)";
-            
-            setTimeout(() => {
-                overlay.style.display = "none";
-                content.style.display = "block";
-                document.body.style.overflow = "auto";
-                setTimeout(() => {
-                    content.style.opacity = "1";
-                    musicControl.style.display = "flex";
-                    setTimeout(() => musicControl.style.opacity = "1", 50);
-                }, 50);
-            }, 800);
-        });
-
-        musicControl.addEventListener('click', function() {
-            if (isPlaying) {
-                audio.pause();
-                musicIcon.className = "fas fa-play text-[#c5a059]";
-                musicControl.classList.remove("playing");
-            } else {
-                audio.play();
-                musicIcon.className = "fas fa-pause text-[#c5a059]";
-                musicControl.classList.add("playing");
-            }
-            isPlaying = !isPlaying;
-        });
-
-        function saveToSheet() {
-            var nameInput = document.getElementById('guestName');
-            var guestsInput = document.getElementById('guestCount');
-            var btn = document.getElementById('submit-btn');
-            var status = document.getElementById('status-msg');
-
-            var name = nameInput.value.trim();
-            var guests = guestsInput.value.trim();
-
-            if (!name || !guests) {
-                status.innerText = "⚠️ Por favor completa los campos obligatorios.";
-                status.className = "block bg-red-50 text-red-600 text-sm mt-6 font-bold p-4 rounded-xl";
-                status.classList.remove('hidden');
-                return;
-            }
-
-            btn.disabled = true;
-            btn.innerText = "GUARDANDO...";
-            status.classList.add('hidden');
-
-            var payload = JSON.stringify({ name: name, guests: guests });
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", SCRIPT_URL, true);
-            xhr.setRequestHeader("Content-Type", "text/plain");
-
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
-                    status.className = "block bg-green-50 text-green-600 text-sm mt-6 font-bold p-4 rounded-xl";
-                    status.classList.remove('hidden');
-                    
-                    setTimeout(function() {
-                        var message = '¡Hola Aylen! Confirmo mi asistencia.\n\nNombre: ' + name + '\nInvitados: ' + guests + '\n\n(Ya quedó anotado en la lista ✨)';
-                        window.location.href = "https://wa.me/5492932502726?text=" + encodeURIComponent(message);
-                    }, 1500);
-                }
-            };
-
-            xhr.onerror = function() {
-                window.location.href = "https://wa.me/5492932502726?text=" + encodeURIComponent("Hola! Intento confirmar pero hubo un error. Somos " + name + " (" + guests + " pers).");
-            };
-
-            xhr.send(payload);
-        }
-
-        const eventDate = new Date(2026, 9, 10, 21, 0, 0).getTime();
-        setInterval(function() {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
-            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
-            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
-            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
-        }, 1000);
-    </script>
+    </main>   
+    <script src="commons.js"></script>    
 </body>
 </html>
