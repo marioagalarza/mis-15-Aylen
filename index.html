@@ -311,12 +311,13 @@
         });
 
         function saveToSheet() {
-            const nameInput = document.getElementById('guestName');
-            const guestsInput = document.getElementById('guestCount');
-            const status = document.getElementById('status-msg');
+            var nameInput = document.getElementById('guestName');
+            var guestsInput = document.getElementById('guestCount');
+            var btn = document.getElementById('submit-btn');
+            var status = document.getElementById('status-msg');
 
-            const name = nameInput.value.trim();
-            const guests = guestsInput.value.trim();
+            var name = nameInput.value.trim();
+            var guests = guestsInput.value.trim();
 
             if (!name || !guests) {
                 status.innerText = "⚠️ Por favor completa los campos obligatorios.";
@@ -325,14 +326,34 @@
                 return;
             }
 
-            status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
-            status.className = "block bg-green-50 text-green-600 text-sm mt-6 font-bold p-4 rounded-xl";
-            status.classList.remove('hidden');
-            
-            setTimeout(() => {
-                const message = '¡Hola Aylen! Confirmo mi asistencia.\n\nNombre: ' + name + '\nInvitados: ' + guests;
-                window.location.href = "https://wa.me/5492932502726?text=" + encodeURIComponent(message);
-            }, 1200);
+            btn.disabled = true;
+            btn.innerText = "GUARDANDO...";
+            status.classList.add('hidden');
+
+            var payload = JSON.stringify({ name: name, guests: guests });
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", SCRIPT_URL, true);
+            xhr.setRequestHeader("Content-Type", "text/plain");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    status.innerText = "✅ ¡Registrado! Abriendo WhatsApp...";
+                    status.className = "block bg-green-50 text-green-600 text-sm mt-6 font-bold p-4 rounded-xl";
+                    status.classList.remove('hidden');
+                    
+                    setTimeout(function() {
+                        var message = '¡Hola Aylen! Confirmo mi asistencia.\n\nNombre: ' + name + '\nInvitados: ' + guests + '\n\n(Ya quedó anotado en la lista ✨)';
+                        window.location.href = "https://wa.me/5492932502726?text=" + encodeURIComponent(message);
+                    }, 1500);
+                }
+            };
+
+            xhr.onerror = function() {
+                window.location.href = "https://wa.me/5492932502726?text=" + encodeURIComponent("Hola! Intento confirmar pero hubo un error. Somos " + name + " (" + guests + " pers).");
+            };
+
+            xhr.send(payload);
         }
 
         const eventDate = new Date(2026, 9, 10, 21, 0, 0).getTime();
