@@ -3,14 +3,26 @@
 Invitación web para los 15 años de Aylen Galarza, publicada con GitHub Pages en:
 https://marioagalarza.github.io/mis-15-Aylen/
 
+## Estructura
+
+```
+index.html
+css/
+  style.css
+js/
+  commons.js
+mascara_vestido.jpg
+musica_invitacion.mp3
+```
+
 ## Versionado y caché
 
-Los assets propios (`style.css`, `commons.js`, `musica_invitacion.mp3`,
-`mascara_vestido.jpg`) se referencian en `index.html` con un parámetro
-`?v=<version>`, por ejemplo:
+Los assets propios (`css/style.css`, `js/commons.js`,
+`musica_invitacion.mp3`, `mascara_vestido.jpg`) se referencian en
+`index.html` con un parámetro `?v=<version>`, por ejemplo:
 
 ```html
-<link rel="stylesheet" href="style.css?v=1.0.0">
+<link rel="stylesheet" href="css/style.css?v=1.1.0">
 ```
 
 GitHub Pages sirve todo con `Cache-Control: max-age=600` y no permite
@@ -27,6 +39,11 @@ descargarlo de nuevo, sin importar el caché anterior.
    en `index.html` con la misma versión.
 
 ## Changelog
+
+### 1.1.0 - 2026-09-07
+- Reorganización de archivos: `style.css` → `css/style.css`,
+  `commons.js` → `js/commons.js`.
+- Version bump a `1.1.0` en las referencias `?v=` de `index.html`.
 
 ### 1.0.0 - 2026-09-07
 - Cambio de música: `musica_descendientes.mp3` → `musica_invitacion.mp3`.
