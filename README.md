@@ -43,6 +43,9 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.4.4 - 2026-09-07
+- Agregado `.gitignore` (archivos de SO, editores, y tooling futuro).
+
 ### 1.4.3 - 2026-09-07
 - Reformateada la indentación de `css/style.css` y `js/commons.js`
   (arrancaban en columna 8, herencia de cuando vivían embebidos en el
