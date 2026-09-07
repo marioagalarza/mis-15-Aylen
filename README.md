@@ -40,6 +40,10 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.1.1 - 2026-09-07
+- Eliminado `musica_descendientes.mp3` (archivo sin uso, reemplazado por
+  `musica_invitacion.mp3` en la versión 1.0.0).
+
 ### 1.1.0 - 2026-09-07
 - Reorganización de archivos: `style.css` → `css/style.css`,
   `commons.js` → `js/commons.js`.
