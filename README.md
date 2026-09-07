@@ -43,6 +43,13 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.4.3 - 2026-09-07
+- Reformateada la indentación de `css/style.css` y `js/commons.js`
+  (arrancaban en columna 8, herencia de cuando vivían embebidos en el
+  HTML). Cambio puramente de formato, sin efecto funcional (verificado
+  con `git diff -w`).
+- Bump `?v=` a `1.4.3`.
+
 ### 1.4.2 - 2026-09-07
 - Sacados los estilos inline del HTML: `#main-content` y `.link-whatsapp`
   ahora viven en `css/style.css` en vez de en atributos `style="..."`.
