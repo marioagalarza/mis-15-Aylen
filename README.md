@@ -40,6 +40,10 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.1.2 - 2026-09-07
+- Eliminado `mascara_vestido.png` (archivo sin uso; la imagen de
+  portada usa `mascara_vestido.jpg`).
+
 ### 1.1.1 - 2026-09-07
 - Eliminado `musica_descendientes.mp3` (archivo sin uso, reemplazado por
   `musica_invitacion.mp3` en la versión 1.0.0).
