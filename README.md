@@ -43,6 +43,11 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.4.0 - 2026-09-07
+- Agregados meta tags: `description`, Open Graph (`og:*`), Twitter Card
+  y `theme-color`, para que el link se vea bien al compartirlo (WhatsApp, etc.).
+- Bump `?v=` a `1.4.0`.
+
 ### 1.3.0 - 2026-09-07
 - Eliminada la carpeta `video/` (aún no hay archivos de video).
 - Nueva carpeta `imagenes/`: `mascara_vestido.jpg` → `imagenes/mascara_vestido.jpg`.
