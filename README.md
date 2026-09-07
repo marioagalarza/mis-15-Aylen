@@ -11,18 +11,23 @@ css/
   style.css
 js/
   commons.js
+audio/
+  musica_invitacion.mp3
+video/
 mascara_vestido.jpg
-musica_invitacion.mp3
 ```
+
+`video/` queda vacía y lista para cuando se agregue algún archivo de
+video (se mantiene en git con un `.gitkeep`).
 
 ## Versionado y caché
 
 Los assets propios (`css/style.css`, `js/commons.js`,
-`musica_invitacion.mp3`, `mascara_vestido.jpg`) se referencian en
-`index.html` con un parámetro `?v=<version>`, por ejemplo:
+`audio/musica_invitacion.mp3`, `mascara_vestido.jpg`) se referencian
+en `index.html` con un parámetro `?v=<version>`, por ejemplo:
 
 ```html
-<link rel="stylesheet" href="css/style.css?v=1.1.0">
+<link rel="stylesheet" href="css/style.css?v=1.2.0">
 ```
 
 GitHub Pages sirve todo con `Cache-Control: max-age=600` y no permite
@@ -39,6 +44,11 @@ descargarlo de nuevo, sin importar el caché anterior.
    en `index.html` con la misma versión.
 
 ## Changelog
+
+### 1.2.0 - 2026-09-07
+- Nueva carpeta `audio/`: `musica_invitacion.mp3` → `audio/musica_invitacion.mp3`.
+- Nueva carpeta `video/` (vacía por ahora, para futuros archivos de video).
+- Actualizar referencia en `index.html` y bump `?v=` a `1.2.0`.
 
 ### 1.1.2 - 2026-09-07
 - Eliminado `mascara_vestido.png` (archivo sin uso; la imagen de
