@@ -43,6 +43,11 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.4.2 - 2026-09-07
+- Sacados los estilos inline del HTML: `#main-content` y `.link-whatsapp`
+  ahora viven en `css/style.css` en vez de en atributos `style="..."`.
+- Bump `?v=` a `1.4.2`.
+
 ### 1.4.1 - 2026-09-07
 - Agregado favicon (`imagenes/favicon.svg`) para evitar el 404 de
   `/favicon.ico` y darle ícono propio a la pestaña del navegador.

@@ -80,6 +80,16 @@
             appearance: none;
         }
 
+        #main-content {
+            opacity: 0;
+            display: none;
+        }
+
+        .link-whatsapp {
+            color: var(--champagne-gold) !important;
+            text-decoration: none;
+        }
+
         .btn-primary {
             background: white;
             color: #1a1a1a !important;
