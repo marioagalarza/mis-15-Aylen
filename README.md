@@ -3,6 +3,9 @@
 Invitación web para los 15 años de Aylen Galarza, publicada con GitHub Pages en:
 https://marioagalarza.github.io/mis-15-Aylen/
 
+Para el razonamiento detrás de cada cambio (no solo el qué, sino el
+por qué), ver [`docs/decisiones.md`](docs/decisiones.md).
+
 ## Estructura
 
 ```
@@ -15,6 +18,9 @@ audio/
   musica_invitacion.mp3
 imagenes/
   mascara_vestido.jpg
+  favicon.svg
+docs/
+  decisiones.md
 ```
 
 ## Versionado y caché
@@ -25,7 +31,7 @@ referencian en `index.html` con un parámetro `?v=<version>`, por
 ejemplo:
 
 ```html
-<link rel="stylesheet" href="css/style.css?v=1.3.0">
+<link rel="stylesheet" href="css/style.css?v=1.4.3">
 ```
 
 GitHub Pages sirve todo con `Cache-Control: max-age=600` y no permite
@@ -42,6 +48,11 @@ descargarlo de nuevo, sin importar el caché anterior.
    en `index.html` con la misma versión.
 
 ## Changelog
+
+### 1.5.0 - 2026-09-07
+- Agregada carpeta `docs/` con [`decisiones.md`](docs/decisiones.md):
+  documenta el motivo detrás de cada cambio del proyecto, no solo el
+  qué (eso ya lo cubre este changelog).
 
 ### 1.4.4 - 2026-09-07
 - Agregado `.gitignore` (archivos de SO, editores, y tooling futuro).
