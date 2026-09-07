@@ -43,6 +43,11 @@ descargarlo de nuevo, sin importar el caché anterior.
 
 ## Changelog
 
+### 1.4.1 - 2026-09-07
+- Agregado favicon (`imagenes/favicon.svg`) para evitar el 404 de
+  `/favicon.ico` y darle ícono propio a la pestaña del navegador.
+- Bump `?v=` a `1.4.1`.
+
 ### 1.4.0 - 2026-09-07
 - Agregados meta tags: `description`, Open Graph (`og:*`), Twitter Card
   y `theme-color`, para que el link se vea bien al compartirlo (WhatsApp, etc.).
